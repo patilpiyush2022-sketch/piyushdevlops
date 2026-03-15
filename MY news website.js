@@ -1,9 +1,5 @@
-# Fullstack Breaking News Website for Maharashtra
 
-# Backend: FastAPI (Python)
-# Frontend: React.js
 
-# --- backend/main.py ---
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import requests
@@ -36,7 +32,6 @@ def get_maharashtra_news():
     response = requests.get(NEWS_API_URL, params=params)
     return response.json()
 
-# --- frontend/src/App.js ---
 import React, { useEffect, useState } from "react";
 
 function App() {
@@ -73,7 +68,7 @@ function App() {
 
 export default App;
 
-# --- frontend/package.json (partial) ---
+
 {
   "name": "maharashtra-news",
   "version": "1.0.0",
@@ -83,8 +78,3 @@ export default App;
   }
 }
 
-# --- Instructions ---
-# 1. Replace YOUR_NEWSAPI_KEY with your NewsAPI.org API key in backend/main.py.
-# 2. Run backend: `uvicorn main:app --reload`
-# 3. Run frontend: `npm start` inside frontend directory (after `npx create-react-app frontend`)
-# 4. Visit http://localhost:3000 to see the news.
